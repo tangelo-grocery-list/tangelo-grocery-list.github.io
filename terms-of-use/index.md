@@ -2,9 +2,9 @@
 
 **Applies to:** Tangelo (global) and Долька / Dolka (select regional markets) — the same grocery list application, published under different names and localizations for different markets.
 
-**Effective date:** 16.09.2026 **Last updated:** 16.09.2026
+**Effective date:** 16.09.2026 **Last updated:** 23.09.2026
 
-Please read these Terms of Use (“Terms”) carefully before using the Tangelo / Долька application (the “App”), operated by Denys Arkharov, an individual developer based in Virolahti, Finland (“we,” “our,” or “us”). By downloading, installing, or using the App, you agree to be bound by these Terms. If you do not agree, do not use the App.
+Please read these Terms of Use (“Terms”) carefully before using the Tangelo / Долька application (the “App”), operated by Denys Arkharov, an individual developer based in Virolahti, Finland (“we,” “our,” or “us”). On first launch, the App asks you to confirm that you accept these Terms and have read our Privacy Policy before you can use the App. By confirming this and by using the App, you agree to be bound by these Terms. If you do not agree, do not use the App.
 
 ## 1. Description of the Service
 
@@ -39,7 +39,7 @@ You must be at least 13 years old (or 16, where a higher age applies under local
 “Your Content” means the grocery lists and other information you enter into the App. Your Content is stored locally on your device, as described in our Privacy Policy, and is not transmitted to or accessible by us, except as described below.
 
 - You retain all rights to Your Content.
-- **On first launch, the App will ask whether you want to allow analytics; until you tap "Allow," the names/titles of items you add to your lists are not sent anywhere.** If you allow analytics, the names/titles of items you add to your lists may be sent to our analytics provider and processed on an aggregated basis to help us identify item names not yet recognized by the App’s internal emoji-keyword dictionary, so we can decide whether to add them in a future App update, as described in our Privacy Policy. You can change this choice at any time using the Analytics toggle in the App’s Settings → Privacy screen. Other content you enter — list names, the app-assigned emoji icon for each item, and purchased/not-purchased status — is never used for this purpose and stays on your device; note that if you type or paste an emoji as part of an item’s name itself, that emoji is part of the name text and is sent along with it when analytics is allowed, as described in our Privacy Policy.
+- **Analytics is optional and off by default.** On first launch, the App shows an analytics screen with an Analytics toggle, which is off by default; you can continue without turning it on. **Unless you turn the Analytics toggle on, the names/titles of items you add to your lists are not sent anywhere.** While the toggle is on, the names/titles of items you add to your lists may be sent to our analytics provider and processed on an aggregated basis to help us identify item names not yet recognized by the App’s internal emoji-keyword dictionary, so we can decide whether to add them in a future App update, as described in our Privacy Policy. You can change this choice at any time using the Analytics toggle in the App’s Settings → Privacy screen. Other content you enter — list names, the app-assigned emoji icon for each item, and purchased/not-purchased status — is never used for this purpose and stays on your device; note that if you type or paste an emoji as part of an item’s name itself, that emoji is part of the name text and is sent along with it while analytics is on, as described in our Privacy Policy.
 - You are solely responsible for Your Content and for how you use it, including ensuring it complies with Section 3 (“Prohibited Content”) and does not include sensitive personal, financial, or confidential information you would not want visible to others who may see your device’s lock screen (see our Privacy Policy).
 - We are not responsible for loss of Your Content resulting from app uninstallation, device reset, device loss or damage, OS updates, or clearing of app data. **We strongly recommend you do not rely on the App as your only record of important information.**
 
@@ -88,7 +88,7 @@ These Terms are governed by the laws of Finland, without regard to conflict-of-l
 
 ## 14. Changes to These Terms
 
-We may update these Terms from time to time. Continued use of the App after changes take effect constitutes acceptance of the updated Terms. Material changes will be indicated by an updated “Last updated” date, and where required by law, additional notice will be provided.
+We may update these Terms from time to time. Material changes will be indicated by an updated “Last updated” date, and where required by law, additional notice will be provided, which may include asking you to review and accept the updated Terms on your next launch of the App. Continued use of the App after changes take effect constitutes acceptance of the updated Terms.
 
 ## 15. Severability
 
