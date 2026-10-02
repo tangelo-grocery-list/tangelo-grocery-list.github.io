@@ -68,7 +68,12 @@
     flex-direction: column;
     align-items: center;
   }
-  .app svg { width: max(128px, calc(var(--s) * 0.196)); height: auto; }
+  .app svg {
+    display: block;
+    width: max(125px, calc(var(--s) * 0.192));
+    height: auto;
+    filter: drop-shadow(0 2px 3px rgba(0, 0, 0, .18));
+  }
   .app-name {
     margin-top: max(0.4rem, calc(var(--s) * 0.008));
     font-weight: 500;
@@ -155,28 +160,11 @@
 </svg>
 
     <div class="app">
-      <svg viewBox="0 0 628 628" role="img" aria-label="Tangelo app icon">
-        <defs>
-          <filter id="shadow" x="0" y="0" width="627.2" height="627.2" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
-            <feFlood flood-opacity="0" result="bg"/>
-            <feColorMatrix in="SourceAlpha" type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0" result="a"/>
-            <feOffset dy="6.4"/>
-            <feGaussianBlur stdDeviation="3.2"/>
-            <feComposite in2="a" operator="out"/>
-            <feColorMatrix type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0.25 0"/>
-            <feBlend mode="normal" in2="bg" result="s"/>
-            <feBlend mode="normal" in="SourceGraphic" in2="s"/>
-          </filter>
-        </defs>
-        <g filter="url(#shadow)">
-          <rect x="6.4" width="614.4" height="614.4" rx="102.4" fill="#FFCC34"/>
-          <g stroke="#000" stroke-width="38.4" stroke-linecap="round">
-            <path d="M212.8 347.2H321.2"/>
-            <path d="M212.8 296H269.3"/>
-            <path d="M212.8 244.8H392"/>
-            <path d="M212.8 193.6H321.2"/>
-            <path d="M439.6 312C513.2 419.3 420.4 542 288.2 466C287.3 465.5 287.1 464.2 287.8 463.5L437.1 311.8C437.8 311 439 311.2 439.6 312Z" fill="#000"/>
-          </g>
+      <svg viewBox="0 0 614.4 614.4" role="img" aria-label="Tangelo app icon">
+        <rect width="614.4" height="614.4" rx="102.4" fill="#FFCC34"/>
+        <g stroke="#000" stroke-width="38.4" stroke-linecap="round">
+          <path d="M206.4 347.2H314.8M206.4 296H262.9M206.4 244.8H385.6M206.4 193.6H314.8"/>
+          <path d="M433.2 312C506.8 419.3 414 542 281.8 466C280.9 465.5 280.7 464.2 281.4 463.5L430.7 311.8C431.4 311 432.6 311.2 433.2 312Z" fill="#000"/>
         </g>
       </svg>
       <p class="app-name">Tangelo</p>
