@@ -2,11 +2,11 @@
 
 **Applies to:** Tangelo (global) and Долька / Dolka (select regional markets) — the same grocery list application, published under different names and localizations for different markets.
 
-**Effective date:** 16.09.2026 **Last updated:** 23.09.2026
+**Effective date:** 17.10.2026 **Last updated:** 17.10.2026
 
 This Privacy Policy describes how the developer of Tangelo / Долька (“we,” “our,” or “us”) collects, uses, and protects information when you use our Android application, in any of its branded/localized versions (the “App”).
 
-On first launch, the App asks you to confirm that you accept our Terms of Use and have read this Privacy Policy before you can use the App. By using the App, you acknowledge that you have read this Privacy Policy. This acknowledgement is not consent to analytics: analytics is a separate, optional choice described in “Legal Basis for Processing” below.
+On first launch, the App asks you to confirm that you accept our Terms of Use and have read this Privacy Policy before you can use the App. By using the App, you acknowledge that you have read this Privacy Policy. Analytics is a separate setting: for new installations it is **on by default**, and you can turn it off at any time, as described in “Legal Basis for Processing” below.
 
 ## Who We Are
 
@@ -36,7 +36,7 @@ We use Firebase Analytics, a service provided by Google LLC, to understand how u
 
 This data does not include your name, email address, or phone number, or the app-assigned emoji icon for an item — but it may include the text of item names, which can contain emoji characters you typed or pasted yourself (see “Item Names (for Emoji Dictionary Improvement)” below for details). It also does not include list names or purchased/not-purchased status.
 
-**Analytics is off by default.** It is collected only while the **Analytics toggle** is turned on. You can turn it on during first launch or at any time later in the App’s **Settings → Privacy** screen, and turn it off again in the same place — see “How to give or withdraw consent” below for details.
+**Analytics is on by default for new installations, and you can turn it off.** It is collected only while the **Analytics toggle** is turned on. You can turn it off on the analytics screen shown during first launch, before any analytics data is sent, or at any time later in the App’s **Settings → Privacy** screen, and turn it back on in the same place — see “How to turn analytics off (opt out)” below for details.
 
 Analytics events, including item names described below, are associated with a Firebase-generated installation identifier tied to your specific copy of the App on your device (not to your name or any account). This identifier lets us distinguish one installation’s events from another’s, including over time. This means the data is **pseudonymized rather than fully anonymous**: while we cannot directly identify you from it, someone with access to the underlying analytics data could, in principle, see the pattern of events (including item names) associated with a single installation. We do not attempt to re-identify individuals from this data, and we have no name, email, or other directly identifying information to link it to.
 
@@ -44,11 +44,11 @@ Analytics events, including item names described below, are associated with a Fi
 
 If crash reporting is enabled (e.g., via Firebase Crashlytics), we may collect technical diagnostic data such as crash logs, stack traces, device state at the time of a crash, and app version, to help us fix bugs and improve stability. This data is not linked to your identity.
 
-**Crash diagnostics are collected regardless of the Analytics toggle** — they are necessary for us to keep the App functioning correctly and are not part of the consent-based analytics/item-names/advertising-ID collection described elsewhere in this policy (see “Legal Basis for Processing” below).
+**Crash diagnostics are collected regardless of the Analytics toggle** — they are necessary for us to keep the App functioning correctly and are not part of the optional analytics/item-names/advertising-ID collection described elsewhere in this policy (see “Legal Basis for Processing” below).
 
 ### 3. Advertising Identifier
 
-The App may collect and use the Advertising ID provided by your device for analytics and measurement purposes only, and only while the Analytics toggle is turned on, as described in “Legal Basis for Processing” below. It is not collected if you have not turned analytics on. It is not used to build an advertising profile of you or to serve personalized ads within the App unless separately disclosed. You can also independently reset or limit the use of the Advertising ID at any time in your device settings (Settings → Privacy → Ads, or equivalent), regardless of your in-app choice.
+The App may collect and use the Advertising ID provided by your device for analytics and measurement purposes only, and only while the Analytics toggle is turned on, as described in “Legal Basis for Processing” below. It is not collected if you have turned analytics off. It is not used to build an advertising profile of you or to serve personalized ads within the App unless separately disclosed. You can also independently reset or limit the use of the Advertising ID at any time in your device settings (Settings → Privacy → Ads, or equivalent), regardless of your in-app choice.
 
 ### 4. Local Reminders/Notifications
 
@@ -66,7 +66,7 @@ To help us identify item names that are **not yet recognized** by this dictionar
 - **Item names are not linked to your name, email address, account, or any other information that directly identifies you** — the App has no accounts or sign-in. However, as described in “Analytics Data” above, item names are technically associated with a per-installation identifier generated by Firebase, so they are **pseudonymized, not fully anonymous**: it is technically possible to see which item names came from the same App installation over time, even though we cannot tell who that installation belongs to.
 - Other fields — list names, purchased/not-purchased status, and the **separate emoji icon automatically assigned by the App** to each item — are **not** sent for this purpose and remain local to your device, as described in “Local Data Storage” below. This exclusion applies only to that app-assigned emoji field: if you type or paste an emoji as part of an item’s name itself (e.g., naming an item “🍎 apples”), that emoji is part of the item name text and is sent along with the rest of the name, as described above — it is not filtered out.
 - **Do not add sensitive, confidential, or prohibited categories of information to your lists** (see our Terms of Use, “Prohibited Content”), since, while the Analytics toggle is on, item name text may be processed as described in this section and is not fully anonymous.
-- You can stop this processing at any time by turning off the **Analytics toggle** in the App’s **Settings → Privacy** screen — see “How to give or withdraw consent” below.
+- You can stop this processing at any time by turning off the **Analytics toggle** in the App’s **Settings → Privacy** screen — see “How to turn analytics off (opt out)” below.
 
 ### 6. Local Data Storage
 
@@ -76,12 +76,14 @@ With the exception of item names processed as described above, your grocery list
 
 Where the GDPR applies, we process your data on the following legal bases:
 
-- **Consent** — for analytics, advertising identifier collection, and item name processing for emoji-keyword dictionary improvement. On first launch, after you accept the Terms of Use and acknowledge this Privacy Policy, the App shows an **analytics screen** with a short explanation and an **Analytics toggle**, which is **off by default**. This screen is shown to **all users, regardless of location** — not only those in the EEA/UK. The “Next” button on this screen is always available, so you can continue without turning analytics on. **No analytics events, item names, or the Advertising ID are collected or sent unless you turn the Analytics toggle on.** Collection begins as soon as you turn the toggle on and continues while it remains on. If you leave the toggle off, the App works normally, but nothing described in this bullet point is collected. You can change this choice at any time afterward in Settings → Privacy. (This does not affect crash diagnostics — see “Crash and Diagnostic Data” above and “Legitimate interests” below.)
+- **Legitimate interests, with your right to object at any time** — for analytics, advertising identifier collection, and item name processing for emoji-keyword dictionary improvement. Our legitimate interest is understanding how the App is used, improving it, and expanding the emoji dictionary; we limit this to pseudonymized data that is not linked to your name or any account. On first launch, after you accept the Terms of Use and acknowledge this Privacy Policy, the App shows an **analytics screen** with a short explanation and an **Analytics toggle**, which is **on by default for new installations**. This screen is shown to **all users, regardless of location** — not only those in the EEA/UK. You can turn the toggle off on this screen before continuing; if you do, **no analytics events, item names, or the Advertising ID are collected or sent**. If you continue with the toggle on, collection begins and continues while the toggle remains on. If you turn the toggle off, the App works exactly the same, but nothing described in this bullet point is collected. You can change this choice at any time afterward in Settings → Privacy. (This does not affect crash diagnostics — see “Crash and Diagnostic Data” above and the next bullet point.)
 - **Legitimate interests** — for crash diagnostics and basic technical logs necessary to keep the App functioning and secure. Crash diagnostics are collected regardless of your analytics choice, as they are limited to technical data needed to fix bugs and are not linked to your identity.
 
-**How to give or withdraw consent:** You give consent by turning on the **Analytics toggle**, either on the analytics screen shown on first launch or later in the App’s **Settings → Privacy** screen, accessible by tapping the **gear (⚙) icon** in the top-right corner of the toolbar on the App’s main/home screen. The same toggle appears in both places and reflects the same setting. Turning the toggle off tells the App to stop sending analytics events, item names, and the Advertising ID to Firebase. This takes effect immediately, without needing to uninstall the App, and you can turn analytics back on at any time in the same screen. Withdrawing consent this way does not affect the lawfulness of processing carried out while the toggle was on, and it does not affect crash diagnostics, which continue regardless (see above).
+**Existing installations:** this change of default applies only to new installations. If you installed the App before 17.10.2026, your existing Analytics setting is not changed by this update: if analytics was off, it stays off until you turn it on yourself.
 
-If you prefer, you can also withdraw consent by uninstalling the App entirely, which stops all data collection described in this policy (since there is no account or identifier tied to you that would allow us to continue collecting data afterward) and also removes your locally stored list data.
+**How to turn analytics off (opt out):** Turn off the **Analytics toggle**, either on the analytics screen shown on first launch or later in the App’s **Settings → Privacy** screen, accessible by tapping the **gear (⚙) icon** in the top-right corner of the toolbar on the App’s main/home screen. The same toggle appears in both places and reflects the same setting. Turning the toggle off tells the App to stop sending analytics events, item names, and the Advertising ID to Firebase. This takes effect immediately, without needing to uninstall the App, and you can turn analytics back on at any time in the same screen. Turning analytics off does not affect processing carried out while the toggle was on, and it does not affect crash diagnostics, which continue regardless (see above). Turning the toggle off is how you exercise your right to object to this processing; you do not need to contact us or give a reason, although you may also contact us at the email below.
+
+If you prefer, you can also stop analytics by uninstalling the App entirely, which stops all data collection described in this policy (since there is no account or identifier tied to you that would allow us to continue collecting data afterward) and also removes your locally stored list data.
 
 For the Advertising ID specifically, you can independently limit or delete it at any time directly in your device settings (Settings → Privacy → Ads), regardless of the in-app Analytics toggle.
 
@@ -131,7 +133,7 @@ You have the right to:
 - Request correction or deletion of your data
 - Object to or restrict processing
 - Request data portability, where applicable
-- Withdraw consent at any time
+- Object to analytics processing at any time, including by turning off the Analytics toggle in Settings → Privacy
 - Lodge a complaint with your local data protection authority
 
 We will respond to verified requests within **30 days**, or as required by applicable law.
@@ -165,7 +167,7 @@ We take reasonable technical and organizational measures to protect the limited 
 
 ## Changes to This Privacy Policy
 
-We may update this Privacy Policy from time to time to reflect changes in the App, our practices, or legal requirements. Material changes will be indicated by an updated “Last updated” date at the top of this page, and, where required by law, we will provide additional notice (e.g., an in-app notice, or asking you to review the updated policy on your next launch of the App) before the change takes effect. Changes to this policy do not change your analytics choice: if the Analytics toggle is off, it stays off.
+We may update this Privacy Policy from time to time to reflect changes in the App, our practices, or legal requirements. Material changes will be indicated by an updated “Last updated” date at the top of this page, and, where required by law, we will provide additional notice (e.g., an in-app notice, or asking you to review the updated policy on your next launch of the App) before the change takes effect. Changes to this policy do not change your existing analytics choice: if the Analytics toggle is off, it stays off.
 
 ## Contact Us
 
