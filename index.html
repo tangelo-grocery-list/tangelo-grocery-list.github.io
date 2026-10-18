@@ -160,7 +160,8 @@
       width: min(600px, 68vh, 42vw);
       padding-top: 8vh;
     }
-    .device img { width: 100%; }
+    /* the image carries transparent room for the notification shadows; offset it so the phone itself keeps its place */
+    .device img { width: 101.7%; max-width: none; margin-left: -0.5%; }
 
     .legal {
       margin-top: 12px;
@@ -258,7 +259,7 @@
     </section>
 
     <figure class="device">
-      <img src="assets/phone.webp" width="1366" height="1713" fetchpriority="high"
+      <img src="assets/phone.webp" width="1389" height="1713" fetchpriority="high"
            alt="Android lock screen with Tangelo notifications showing a grocery list: Apples, Grapes, Kiwi, Bulb, Cherries, Pepper, Cake, Balloons">
     </figure>
     </div>
