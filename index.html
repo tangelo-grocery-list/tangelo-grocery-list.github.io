@@ -4,25 +4,49 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
   <title>Tangelo — Grocery list on your lock screen</title>
-  <meta name="description" content="Tangelo is a grocery list with emojis that also lives on your lock screen. Stop unlocking, start shopping. Download it on Google Play.">
+  <meta name="description" content="Tangelo is a grocery list with emojis that also lives on your lock screen. Stop unlocking, keep shopping. Free on Google Play.">
   <meta name="theme-color" content="#FAF8F8">
   <link rel="icon" href="assets/icon.svg" type="image/svg+xml">
   <link rel="apple-touch-icon" href="assets/icon.svg">
 
   <meta property="og:type" content="website">
   <meta property="og:url" content="https://tangelo-grocery-list.github.io/">
-  <meta property="og:title" content="Stop unlocking. Start shopping. — Tangelo">
+  <meta property="og:title" content="Stop unlocking. Keep shopping. — Tangelo grocery list">
   <meta property="og:description" content="Sticky thumb? Picky scanner? Your grocery list is already on your lock screen.">
   <meta property="og:image" content="https://tangelo-grocery-list.github.io/assets/og-image.jpg">
   <meta property="og:image:width" content="1200">
-  <meta property="og:image:height" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta property="og:image:alt" content="Tangelo Grocery List — Stop unlocking. Keep shopping. Phone with the grocery list on the lock screen.">
   <meta name="twitter:card" content="summary_large_image">
 
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700&display=swap" rel="stylesheet">
+  <link rel="preload" href="assets/fonts/inter-700.woff2" as="font" type="font/woff2" crossorigin>
 
   <style>
+    /* Inter, self-hosted (SIL OFL 1.1, see assets/fonts/OFL.txt) */
+    @font-face {
+      font-family: "Inter";
+      font-style: normal;
+      font-weight: 400;
+      font-display: swap;
+      src: url("assets/fonts/inter-400.woff2") format("woff2");
+      unicode-range: U+0000-00FF,U+0131,U+0152-0153,U+02BB-02BC,U+02C6,U+02DA,U+02DC,U+0304,U+0308,U+0329,U+2000-206F,U+2074,U+20AC,U+2122,U+2191,U+2193,U+2212,U+2215,U+FEFF,U+FFFD;
+    }
+    @font-face {
+      font-family: "Inter";
+      font-style: normal;
+      font-weight: 500;
+      font-display: swap;
+      src: url("assets/fonts/inter-500.woff2") format("woff2");
+      unicode-range: U+0000-00FF,U+0131,U+0152-0153,U+02BB-02BC,U+02C6,U+02DA,U+02DC,U+0304,U+0308,U+0329,U+2000-206F,U+2074,U+20AC,U+2122,U+2191,U+2193,U+2212,U+2215,U+FEFF,U+FFFD;
+    }
+    @font-face {
+      font-family: "Inter";
+      font-style: normal;
+      font-weight: 700;
+      font-display: swap;
+      src: url("assets/fonts/inter-700.woff2") format("woff2");
+      unicode-range: U+0000-00FF,U+0131,U+0152-0153,U+02BB-02BC,U+02C6,U+02DA,U+02DC,U+0304,U+0308,U+0329,U+2000-206F,U+2074,U+20AC,U+2122,U+2191,U+2193,U+2212,U+2215,U+FEFF,U+FFFD;
+    }
     :root {
       --bg: #FAF8F8;
       --ink: #000;
@@ -65,7 +89,7 @@
     .copy {
       position: relative; z-index: 2;
       display: flex; flex-direction: column; align-items: flex-start;
-      padding: 72px 0;
+      padding: 52px 0;
     }
     .app-head {
       display: flex; align-items: center;
@@ -80,7 +104,22 @@
     .app-name {
       font-weight: 700;
       font-size: clamp(1.5rem, 2.4vw, 2.25rem);
+      line-height: 1.1;
       letter-spacing: -0.01em;
+    }
+    .app-name small {
+      display: block;
+      margin-left: 0.15em; /* optical alignment under the bold "Tangelo" */
+      font-weight: 500;
+      font-size: 0.6em;
+      letter-spacing: 0;
+      color: var(--muted);
+    }
+    .free {
+      margin-top: clamp(24px, 2.8vw, 36px);
+      font-weight: 500;
+      font-size: clamp(1rem, 1.3vw, 1.25rem);
+      color: var(--muted);
     }
     h1 {
       font-weight: 700;
@@ -106,7 +145,7 @@
     .emoji img { width: clamp(32px, 3vw, 44px); }
     .store {
       display: inline-block;
-      margin-top: clamp(28px, 3.2vw, 44px);
+      margin-top: 12px;
       border-radius: 10px;
       transition: transform .15s ease;
     }
@@ -128,6 +167,19 @@
       font-size: 12px; line-height: 1.4;
       color: var(--muted);
     }
+    .links {
+      display: flex; gap: 16px;
+      margin-top: 18px;
+      font-size: 12px; line-height: 1.4;
+    }
+    .links a {
+      color: var(--muted);
+      text-decoration: underline;
+      text-decoration-color: rgba(84, 84, 89, .4);
+      text-underline-offset: 2px;
+    }
+    .links a:hover { color: var(--ink); text-decoration-color: currentColor; }
+    .links a:focus-visible { outline: 2px solid var(--ink); outline-offset: 2px; border-radius: 2px; }
 
     @media (max-width: 820px) {
       .hero {
@@ -139,26 +191,31 @@
       /* no icon on mobile: its space is split above and below the text, so page height stays the same */
       .app-head { display: none; }
       .copy {
-        padding: 28px 0 0;
+        padding: 20px 0 0;
         align-items: center;
         text-align: center;
       }
-      /* order on mobile: brand, headline, subline, badge, legal */
+      /* order on mobile: brand, headline, subline, free, badge, legal */
       .brand {
         order: 0;
         display: flex; align-items: center; gap: 10px;
         font-weight: 700; font-size: 1.25rem; letter-spacing: -0.01em;
       }
+      .brand small { margin-left: -4px; font-weight: 500; font-size: 1rem; color: var(--muted); }
+      .brand small::before { content: "·"; margin-right: 6px; }
       .brand img { width: 32px; border-radius: 22%; box-shadow: 0 1px 2px rgba(0,0,0,.18); }
       .emoji { display: none; }
       h1 { order: 2; margin-top: 16px; font-size: clamp(2.125rem, 10vw, 2.5rem); }
       .sub { order: 3; }
-      .store { order: 4; margin-top: 24px; }
+      .free { order: 4; margin-top: 12px; font-size: 0.9375rem; }
+      .store { order: 5; margin-top: 8px; }
       .store img { width: 156px; } /* ~46px tall: above Google's 28px minimum and a comfortable tap target */
-      .legal { order: 5; }
+      .legal { order: 6; }
+      .links { order: 7; justify-content: center; }
       .wave--top { display: none; }
       .wave--bottom { display: block; bottom: 0; width: 160%; left: -30%; }
-      .device { width: min(100%, 440px); padding-top: 28px; justify-self: center; }
+      /* slightly wider than the text column so the phone fills the screen height without a gap above it */
+      .device { width: min(calc(100% + 8px), 456px); padding-top: 16px; justify-self: center; }
     }
     @media (prefers-reduced-motion: reduce) {
       .store { transition: none; }
@@ -178,26 +235,31 @@
     <section class="copy">
       <div class="app-head">
         <img class="app-icon" src="assets/icon.svg" width="96" height="96" alt="">
-        <span class="app-name">Tangelo</span>
+        <span class="app-name">Tangelo<small>Grocery List</small></span>
       </div>
-      <div class="brand"><img src="assets/icon.svg" width="32" height="32" alt=""><span>Tangelo</span></div>
-      <h1><span>Stop unlocking.</span> <span>Start shopping.</span></h1>
-      <p class="sub"><span>Sticky thumb? Picky scanner?</span> <span>Your list is already on screen.</span></p>
+      <div class="brand"><img src="assets/icon.svg" width="32" height="32" alt=""><span>Tangelo</span><small>Grocery List</small></div>
+      <h1><span>Stop unlocking.</span> <span>Keep shopping.</span></h1>
+      <p class="sub"><span>Sticky thumb? Picky scanner?</span> <span>Your list is already on your lock&nbsp;screen.</span></p>
       <ul class="emoji" aria-hidden="true">
         <li><img src="assets/lemon.webp" width="44" height="44" alt=""></li>
         <li><img src="assets/mango.webp" width="44" height="44" alt=""></li>
         <li><img src="assets/blueberries.webp" width="44" height="44" alt=""></li>
         <li><img src="assets/apple.webp" width="44" height="44" alt=""></li>
       </ul>
+      <p class="free">Free to download</p>
       <a class="store" href="https://play.google.com/store/apps/details?id=app.grocery.list">
         <img src="assets/google-play-badge.png" width="250" height="74" alt="Get it on Google Play">
       </a>
       <p class="legal">Google Play and the Google Play logo<br>are trademarks of Google LLC.</p>
+      <nav class="links" aria-label="Legal">
+        <a href="/privacy-policy">Privacy Policy</a>
+        <a href="/terms-of-use">Terms of Use</a>
+      </nav>
     </section>
 
     <figure class="device">
-      <img src="assets/phone.webp" width="1360" height="1713" fetchpriority="high"
-           alt="Android phone with Tangelo notifications showing a grocery list: Apples, Grapes, Kiwi, Strawberry, Pear, Pineapple, Cherries">
+      <img src="assets/phone.webp" width="1372" height="1713" fetchpriority="high"
+           alt="Android lock screen with Tangelo notifications showing a grocery list: Apples, Grapes, Kiwi, Bulb, Strawberry, Pear, Pineapple, Cherries">
     </figure>
     </div>
   </main>
