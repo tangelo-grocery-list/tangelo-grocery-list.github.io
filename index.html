@@ -155,9 +155,10 @@
       padding-top: 8vh;
     }
     /* the image carries transparent room for the notification shadows; offset it so the phone itself keeps its place.
-       It also carries 240px of extra phone below the frame (17.572% of the figure width): hidden below the page edge
-       here, shown on mobile where the phone runs down over the yellow floor. */
-    .device img { width: 101.7%; max-width: none; margin-left: -0.5%; margin-bottom: -17.572%; }
+       It also carries 660px of extra phone below the frame (48.324% of the figure width): hidden below the page edge
+       here, shown on mobile where the phone runs down over the yellow floor and on under the system navigation bar
+       (safe-area-inset-bottom in Chrome edge-to-edge), so no yellow band shows below the phone. */
+    .device img { width: 101.7%; max-width: none; margin-left: -0.5%; margin-bottom: -48.324%; }
 
     /* Google Play trademark notice: pinned to the very bottom of the page */
     .legal {
@@ -220,13 +221,18 @@
         left: 0; right: 0; bottom: 0; height: var(--floor);
         background: var(--yellow);
       }
-      /* legal notice: one line on a translucent white plate over the phone, centered in the floor band below the lock
-         (the stage ends where the floor begins, so half the floor height down = its middle) */
+      /* legal notice on a translucent white plate over the phone, centered in the 44px floor band below the lock
+         and above the system navigation bar (the stage ends where the floor begins, so 22px down = its middle).
+         One line while it fits at 10px+; otherwise it wraps to two lines. Always 16px clear of the screen edges. */
       .legal {
-        left: 50%; transform: translate(-50%, 50%);
-        bottom: calc((44px / -2) - env(safe-area-inset-bottom));
-        white-space: nowrap;
-        font-size: min(12px, calc((100vw - 40px) * 0.0307));
+        left: -8px; right: -8px; /* stage is inset 24px from the screen: this leaves a 16px gutter */
+        width: fit-content; max-width: calc(100% + 16px);
+        margin: 0 auto;
+        transform: translateY(50%);
+        bottom: -22px;
+        text-align: center;
+        text-wrap: balance;
+        font-size: clamp(10px, (100vw - 52px) * 0.0305, 12px);
         line-height: 1.3;
         padding: 3px 10px;
         border-radius: 8px;
@@ -280,7 +286,7 @@
     </section>
 
     <figure class="device">
-      <img src="assets/phone.webp?v=3" width="1389" height="1953" fetchpriority="high"
+      <img src="assets/phone.webp?v=4" width="1389" height="2373" fetchpriority="high"
            alt="Android lock screen with Tangelo notifications showing a grocery list: Apples, Grapes, Kiwi, Bulb, Pepper, Cherries, Tomatoes, Carrot">
     </figure>
 
